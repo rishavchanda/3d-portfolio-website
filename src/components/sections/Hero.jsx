@@ -174,6 +174,7 @@ const ResumeButton = styled.a`
         padding: 12px 0;
         font-size: 18px;
     } 
+    color: white;
 `;
 
 const Img = styled.img`
@@ -248,7 +249,9 @@ const Hero = () => {
                 <SubTitle>{Bio.description}</SubTitle>
               </motion.div>
 
-              <ResumeButton>Check Resume</ResumeButton>
+              <ResumeButton href={Bio.resume} target="_blank">
+                Check Resume
+              </ResumeButton>
             </HeroLeftContainer>
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
