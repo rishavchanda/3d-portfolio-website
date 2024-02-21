@@ -1,19 +1,20 @@
 import React from "react";
-import styled from "styled-components";
-import { experiences } from "../../data/constants";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import styled from "styled-components";
+import { experiences } from "../../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
 
 const Container = styled.div`
-margin-top: 100px;
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-contnet: center;
+  margin-top: 50px;
+  position: rlative;
+  z-index: 1;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -27,7 +28,6 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
-
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -39,7 +39,6 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
-
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -52,7 +51,7 @@ const Desc = styled.div`
 
 const Experience = () => {
   return (
-    <Container id="Education">
+    <Container id="Experience">
       <Wrapper>
         <Title>Experience</Title>
         <Desc

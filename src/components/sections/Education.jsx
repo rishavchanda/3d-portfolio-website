@@ -1,19 +1,20 @@
 import React from "react";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import EarthCanvas from "../canvas/Earth";
 
 const Container = styled.div`
-margin-top: 100px;
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-contnet: center;
+  position: rlative;
+  z-index: 1;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -27,7 +28,6 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
-
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -39,7 +39,6 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
-
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -69,6 +68,7 @@ const Education = () => {
             <EducationCard key={`education-${index}`} education={education} />
           ))}
         </VerticalTimeline>
+        <EarthCanvas />
       </Wrapper>
     </Container>
   );

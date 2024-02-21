@@ -1,17 +1,14 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-import EarthCanvas from "../canvas/Earth";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  flex-direction: column;
+  justify-contnet: center;
+  position: rlative;
   z-index: 1;
   align-items: center;
-  @media (max-width: 960px) {
-    padding: 0px;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -21,14 +18,12 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1350px;
-  padding: 0px 0px 80px 0px;
+  max-width: 1100px;
   gap: 12px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
-
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -40,18 +35,17 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
-
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
-  max-width: 600px;
+  font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
-    margin-top: 12px;
     font-size: 16px;
   }
 `;
-const ContactForm = styled.form`
+
+const ContactForm = styled.div`
   width: 95%;
   max-width: 600px;
   display: flex;
@@ -101,21 +95,6 @@ const ContactButton = styled.input`
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
@@ -127,8 +106,7 @@ const ContactButton = styled.input`
 
 const Contact = () => {
   const form = useRef();
-
-  const handleSubmit = (e) => {
+  const handelSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
@@ -140,23 +118,25 @@ const Contact = () => {
       .then(
         (result) => {
           alert("Message Sent");
-          form.current.resut();
+          form.current.result();
         },
         (error) => {
           alert(error);
         }
       );
   };
-
   return (
-    <Container>
+    <Container id="Education">
       <Wrapper>
-        <EarthCanvas />
         <Title>Contact</Title>
-        <Desc>
+        <Desc
+          style={{
+            marginBottom: "40px",
+          }}
+        >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handleSubmit}>
+        <ContactForm onSubmit={handelSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />

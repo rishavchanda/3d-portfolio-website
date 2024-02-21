@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import styled from "styled-components";
 
 const Top = styled.div`
   width: 100%;
@@ -12,7 +12,6 @@ const Image = styled.img`
   height: 50px;
   border-radius: 10px;
   margin-top: 4px;
-
   @media only screen and (max-width: 768px) {
     height: 40px;
   }
@@ -22,12 +21,10 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
-const Name = styled.div`
+const School = styled.div`
   font-size: 18px;
   font-weight: 600px;
   color: ${({ theme }) => theme.text_primary + 99};
-
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -36,7 +33,6 @@ const Degree = styled.div`
   font-size: 14px;
   font-weight: 500px;
   color: ${({ theme }) => theme.text_secondary + 99};
-
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -50,14 +46,6 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
 
 const Description = styled.div`
   width: 100%;
@@ -69,7 +57,19 @@ const Description = styled.div`
     font-size: 12px;
   }
 `;
-const Span = styled.div``;
+
+const Grade = styled.div`
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary + 99};
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
+const Span = styled.div`
+  display: -webkit-box;
+  max-width: 100%;
+`;
 
 const EducationCard = ({ education }) => {
   return (
@@ -78,9 +78,9 @@ const EducationCard = ({ education }) => {
         <img
           width="100%"
           height="100%"
-          alt={education.school}
+          alt={education?.school}
           style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={education.img}
+          src={education?.img}
         />
       }
       contentStyle={{
@@ -90,7 +90,6 @@ const EducationCard = ({ education }) => {
         background: "#1d1836",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: "rgba(17, 25, 40, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
@@ -98,22 +97,22 @@ const EducationCard = ({ education }) => {
       contentArrowStyle={{
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
       }}
-      date={education.date}
+      date={education?.date}
     >
       <Top>
-        <Image src={education.img} />
+        <Image src={education?.img} />
         <Body>
-          <Name>{education.school}</Name>
-          <Degree>{education.degree}</Degree>
-          <Date>{education.date}</Date>
+          <School>{education?.school}</School>
+          <Degree>{education?.degree}</Degree>
+          <Date>{education?.date}</Date>
         </Body>
       </Top>
       <Grade>
-        <b>Grade :</b>
-        {education.grade}
+        <b>Grade : </b>
+        {education?.grade}
       </Grade>
       <Description>
-        <Span>{education.desc}</Span>
+        {education?.desc && <Span>{education.desc}</Span>}
       </Description>
     </VerticalTimelineElement>
   );

@@ -35,14 +35,6 @@ const Tags = styled.div`
   gap: 8px;
   margin-top: 4px;
 `;
-const Tag = styled.div`
-  font-size: 12px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.primary};
-  background-color: ${({ theme }) => theme.primary + 15};
-  padding: 2px 8px;
-  border-radius: 10px;
-`;
 const Details = styled.div`
   width: 100%;
   display: flex;
@@ -107,11 +99,7 @@ const ProjectCard = ({ project }) => {
   return (
     <Card>
       <Image src={project.image} />
-      <Tags>
-        {project.tags?.map((tag, index) => (
-          <Tag>{tag}</Tag>
-        ))}
-      </Tags>
+      <Tags></Tags>
       <Details>
         <Title>{project.title}</Title>
         <Date>{project.date}</Date>

@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import styled from "styled-components";
 
 const Top = styled.div`
   width: 100%;
@@ -12,7 +12,6 @@ const Image = styled.img`
   height: 50px;
   border-radius: 10px;
   margin-top: 4px;
-
   @media only screen and (max-width: 768px) {
     height: 40px;
   }
@@ -22,12 +21,10 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 const Role = styled.div`
   font-size: 18px;
   font-weight: 600px;
   color: ${({ theme }) => theme.text_primary + 99};
-
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -36,7 +33,6 @@ const Company = styled.div`
   font-size: 14px;
   font-weight: 500px;
   color: ${({ theme }) => theme.text_secondary + 99};
-
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -50,14 +46,6 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
 
 const Description = styled.div`
   width: 100%;
@@ -69,16 +57,17 @@ const Description = styled.div`
     font-size: 12px;
   }
 `;
-const Span = styled.div`
-  display: -webkit-box;
-  max-width: 100%;
-`;
 const Skills = styled.div`
   width: 100%;
   display: flex;
   gap: 12px;
   margin-top: -10px;
 `;
+const Span = styled.div`
+  display: -webkit-box;
+  max-width: 100%;
+`;
+
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
@@ -101,9 +90,9 @@ const ExperienceCard = ({ experience }) => {
         <img
           width="100%"
           height="100%"
-          alt={experience.school}
+          alt={experience?.company}
           style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={experience.img}
+          src={experience?.img}
         />
       }
       contentStyle={{
@@ -113,7 +102,6 @@ const ExperienceCard = ({ experience }) => {
         background: "#1d1836",
         color: "#fff",
         boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        // backdropFilter: "blur(3px) saturate(106%)",
         backgroundColor: "rgba(17, 25, 40, 0.83)",
         border: "1px solid rgba(255, 255, 255, 0.125)",
         borderRadius: "6px",
@@ -121,23 +109,23 @@ const ExperienceCard = ({ experience }) => {
       contentArrowStyle={{
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
       }}
-      date={experience.date}
+      date={experience?.date}
     >
       <Top>
-        <Image src={experience.img} />
+        <Image src={experience?.img} />
         <Body>
-          <Role>{experience.role}</Role>
-          <Company>{experience.company}</Company>
-          <Date>{experience.date}</Date>
+          <Role>{experience?.role}</Role>
+          <Company>{experience?.company}</Company>
+          <Date>{experience?.date}</Date>
         </Body>
       </Top>
       <Description>
-        {experience?.desc && <Span>{experience?.desc}</Span>}
+        {experience?.desc && <Span>{experience.desc}</Span>}
         {experience?.skills && (
           <>
             <br />
             <Skills>
-              <b>Skills:</b>
+              <b>Skills</b>
               <ItemWrapper>
                 {experience?.skills?.map((skill, index) => (
                   <Skill>• {skill}</Skill>

@@ -4,13 +4,14 @@ import { skills } from "../../data/constants";
 import { Tilt } from "react-tilt";
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content-center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-contnet: center;
+  position: rlative;
+  z-index: 1;
+  align-items: center;
 `;
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -24,7 +25,6 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
-
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -36,7 +36,6 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
-
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -55,6 +54,7 @@ const SkillsContainer = styled.div`
   gap: 50px;
   justify-content: center;
 `;
+
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
@@ -63,7 +63,6 @@ const Skill = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
-
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -111,7 +110,6 @@ const SkillItem = styled.div`
     padding: 6px 12px;
   }
 `;
-
 const SkillImage = styled.img`
   width: 24px;
   height: 24px;

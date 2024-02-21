@@ -4,10 +4,9 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
-import StarCanvas from "./components/canvas/Stars";
-import { AnimatePresence } from "framer-motion";
-import Education from "./components/sections/Education";
 import Experience from "./components/sections/Experience";
+import Education from "./components/sections/Education";
+import StartCanvas from "./components/canvas/Stars";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
@@ -41,22 +40,20 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Body>
-          <StarCanvas />
-          <AnimatePresence>
-            <div>
-              <Hero />
-              <Wrapper>
-                <Skills />
-                <Experience />
-              </Wrapper>
-              <Projects />
-              <Wrapper>
-                <Education />
-                <Contact />
-              </Wrapper>
-              <Footer />
-            </div>
-          </AnimatePresence>
+          <StartCanvas />
+          <div>
+            <Hero />
+            <Wrapper>
+              <Skills />
+              <Experience />
+            </Wrapper>
+            <Projects />
+            <Wrapper>
+              <Education />
+              <Contact />
+            </Wrapper>
+            <Footer />
+          </div>
         </Body>
       </BrowserRouter>
     </ThemeProvider>
