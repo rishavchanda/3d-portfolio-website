@@ -111,7 +111,7 @@ const ProjectCard = ({ project }) => {
         ))}
       </Members>
       <Button href={project.github} target="_blank">
-        View Code
+        View 
       </Button>
     </Card>
   );
