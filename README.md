@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+🌾 FarmConnect
+FarmConnect is a decentralized agriculture trade platform designed to empower farmers and buyers by enabling fair, transparent, and efficient transactions. Built using blockchain technology, FarmConnect ensures secure trade, real-time tracking, and a reward-based system to promote trust and sustainability in the agri-market ecosystem.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Key Features:
 
-## Available Scripts
+🧑‍🌾 Farmer-Buyer Direct Connect: Eliminate middlemen by enabling direct interactions.
 
-In the project directory, you can run:
+🔐 Smart Contracts: Transparent and automated trade agreements using Solidity.
 
-### `npm start`
+💰 Token Rewards: Earn tokens for fair trade and timely delivery.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📦 Delivery Tracking: Real-time tracking of produce using GPS integration.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🌍 Decentralized System: Ensures data integrity and prevents fraud using blockchain.
 
-### `npm test`
+🏅 Reputation System: Builds trust with rating and review mechanisms.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tech Stack:
 
-### `npm run build`
+Frontend: React.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend: Node.js, Express.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Blockchain: Ethereum / Polygon, Solidity
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Database: MongoDB
 
-### `npm run eject`
+Wallet Integration: MetaMask
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+View Demo:
+![image](https://github.com/user-attachments/assets/c0c456f9-6e91-492d-801f-9f7d4bfe25c4)
+![image](https://github.com/user-attachments/assets/2f55f963-10c7-4966-87b8-222d10c5e905)
+![image](https://github.com/user-attachments/assets/3e637d26-dfb7-41a8-bcc9-801ca7f330f3)
+![image](https://github.com/user-attachments/assets/c622bc88-072d-4868-928a-28a15582d4ee)
+![image](https://github.com/user-attachments/assets/17e0b0e2-d26b-4455-8c85-31e3a0c1ea0b)
+![image](https://github.com/user-attachments/assets/e4afbf01-e37d-4958-8b92-b60f6af23818)
+![image](https://github.com/user-attachments/assets/923c7f96-f41a-47e6-812a-bb8acac8d2aa)
+![image](https://github.com/user-attachments/assets/fd61b809-1c22-4729-ad06-2e51e88d2257)
+![image](https://github.com/user-attachments/assets/e32c2b39-5ed5-4049-b241-d072afff2d9f)
+![image](https://github.com/user-attachments/assets/a88d9bf7-4d04-4ff1-91ea-869e665ea207)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
